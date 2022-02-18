@@ -23,7 +23,6 @@ img {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 
@@ -180,11 +179,14 @@ html {
   flex-direction: column;
   color: $white;
   align-items: center;
+  padding: 0 0 64px;
 
   & button {
     padding: 16px 40px;
     border-radius: 29px;
     width: fit-content;
+    border: none;
+    margin-bottom: 16px;
 
     &:nth-child(1) {
       background-color: $greenblue;
@@ -193,5 +195,106 @@ html {
     &:nth-child(2) {
       background-color: $purple;
     }
+  }
+}
+
+.line-and-number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 31px;
+}
+
+.line {
+  height: 84px;
+  width: 1px;
+  background: $grayblue;
+  opacity: 25%;
+}
+
+.number {
+  text-align: center;
+  font-weight: 900;
+  border: 1px solid rgba(135, 135, 157, 0.25);
+  display: inline-block;
+  padding: 15px 19px;
+  border-radius: 50%;
+  color: $grayblue;
+}
+
+.main__images {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0 56px;
+
+  & img {
+    width: 50%;
+    padding: 24px;
+    border-radius: 35px;
+  }
+}
+
+.main__text-container {
+  text-align: center;
+  padding: 0 0 64px;
+
+  & h3 {
+    font-family: $redHatDisplay900;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: $greenblue;
+    padding: 0 0 24px;
+  }
+
+  & h1 {
+    font-family: $redHatDisplay900;
+    font-size: 32px;
+    line-height: 36px;
+    color: $darkblue;
+    padding: 0 0 32px;
+  }
+
+  & p {
+    font-family: $redHatDisplay500;
+    font-size: 16px;
+    line-height: 26px;
+    color: $grayblue;
+  }
+}
+
+.footer__text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../images/mobile/image-footer.jpg");
+  background-size: cover;
+  height: 700px;
+  mix-blend-mode: normal;
+  color: $white;
+  text-align: center;
+  padding: 64px 24px 72px;
+
+  & h1 {
+    font-family: $redHatDisplay900;
+    font-size: 32px;
+    line-height: 36px;
+    padding: 0 0 24px;
+  }
+
+  & p {
+    font-size: 18px;
+    line-height: 26px;
+    padding: 0 0 32px;
+  }
+
+  & button {
+    padding: 16px 40px;
+    color: $white;
+    background-color: $purple;
+    border-radius: 29px;
+    border: none;
   }
 }
