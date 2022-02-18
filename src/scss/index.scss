@@ -48,12 +48,6 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
 /* Inherit fonts for inputs and buttons */
 input,
 button,
@@ -74,3 +68,130 @@ select {
   }
 }
 /* End of reset styles */
+
+/* red-hat-display-500 - latin */
+@font-face {
+  font-family: "Red Hat Display 500";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/red-hat-display-v11-latin-500.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/red-hat-display-v11-latin-500.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/red-hat-display-v11-latin-500.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../fonts/red-hat-display-v11-latin-500.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/red-hat-display-v11-latin-500.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/red-hat-display-v11-latin-500.svg#RedHatDisplay")
+      format("svg"); /* Legacy iOS */
+}
+/* red-hat-display-900 - latin */
+
+@font-face {
+  font-family: "Red Hat Display 900";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/red-hat-display-v11-latin-900.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/red-hat-display-v11-latin-900.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/red-hat-display-v11-latin-900.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../fonts/red-hat-display-v11-latin-900.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/red-hat-display-v11-latin-900.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/red-hat-display-v11-latin-900.svg#RedHatDisplay")
+      format("svg"); /* Legacy iOS */
+}
+
+$greenblue: #4d96a9;
+$purple: #855fb1;
+$darkblue: #28283d;
+$grayblue: #87879d;
+$lightblue: #8fe3f9;
+$lightpink: #d9b8ff;
+$white: #fafafa;
+
+$redHatDisplay500: "Red Hat Display 500";
+$redHatDisplay900: "Red Hat Display 900";
+
+html {
+  font-family: $redHatDisplay500;
+}
+
+.logo {
+  text-align: center;
+  padding: 48px 0 54px;
+}
+
+.hero {
+  padding: 0 0 48px;
+}
+
+.hero__desktop {
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: flex;
+  }
+}
+
+.hero__mobile-and-table {
+  width: 100vw;
+  overflow: hidden;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+
+  & img {
+    width: 110%;
+    transform: translateX(-5%);
+  }
+}
+
+.header__text-container {
+  & h1 {
+    font-family: $redHatDisplay900;
+    font-size: 40px;
+    line-height: 44px;
+    text-align: center;
+    color: $darkblue;
+    padding: 0 0 24px;
+  }
+
+  & p {
+    font-family: $redHatDisplay500;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: $grayblue;
+    padding: 0 0 32px;
+  }
+}
+
+.header__buttons {
+  display: flex;
+  flex-direction: column;
+  color: $white;
+  align-items: center;
+
+  & button {
+    padding: 16px 40px;
+    border-radius: 29px;
+    width: fit-content;
+
+    &:nth-child(1) {
+      background-color: $greenblue;
+    }
+
+    &:nth-child(2) {
+      background-color: $purple;
+    }
+  }
+}
