@@ -421,6 +421,20 @@ html {
   @media (min-width: 1440px) {
     padding: 0 165px;
   }
+
+  &::after {
+    content: "";
+    background-color: $greenblue;
+    opacity: 0.9;
+    width: 100vw;
+    height: 540px;
+    position: absolute;
+    bottom: 0;
+
+    @media (min-width: 1024px) {
+      height: 310px;
+    }
+  }
 }
 
 .footer__text-container {
@@ -469,4 +483,9 @@ html {
       color: $lightpink;
     }
   }
+}
+
+button:hover {
+  cursor: url(../images/pointer-hand.svg) 4 4, pointer;
+  opacity: 80%;
 }
