@@ -1,5 +1,4 @@
-/* Reset styles */
-
+/* =========== Start of Reset Styles =========== */
 *,
 *::before,
 *::after {
@@ -66,8 +65,9 @@ select {
     scroll-behavior: auto !important;
   }
 }
-/* End of reset styles */
+/* =========== End of Reset Styles =========== */
 
+/* =========== Start of Fonts =========== */
 /* red-hat-display-500 - latin */
 @font-face {
   font-family: "Red Hat Display 500";
@@ -107,7 +107,9 @@ select {
       url("../fonts/red-hat-display-v11-latin-900.svg#RedHatDisplay")
       format("svg"); /* Legacy iOS */
 }
+/* =========== End of Fonts =========== */
 
+/* =========== Start of Variables =========== */
 $greenblue: #4d96a9;
 $purple: #855fb1;
 $darkblue: #28283d;
@@ -118,7 +120,9 @@ $white: #fafafa;
 
 $redHatDisplay500: "Red Hat Display 500";
 $redHatDisplay900: "Red Hat Display 900";
+/* =========== End of Variables =========== */
 
+/* =========== Start of Styling Landing Page =========== */
 html {
   font-family: $redHatDisplay500;
 }
@@ -489,3 +493,4 @@ button:hover {
   cursor: url(../images/pointer-hand.svg) 4 4, pointer;
   opacity: 80%;
 }
+/* =========== End of Styling Landing Page =========== */
